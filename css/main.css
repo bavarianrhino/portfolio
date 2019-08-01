@@ -484,6 +484,10 @@ a:focus {
 	font-weight:700;
 }
 
+.margin-top {
+    margin-top: 10px;
+}
+
 /*CALL TO ACTION*/
 .callToAction{
 	color:white;
@@ -514,6 +518,7 @@ a:focus {
 }
 
 .cv-wrapper .cv .title {
+
 }
 
 .cv-wrapper .cv .main {
@@ -847,9 +852,10 @@ a:focus {
 }
 
 /*TESTIMONIALS*/
-.testimonials{
+.testimonials {
 
 }
+
 .testimonials cite{
 	display:block;
 	font-family: "Montserrat",Helvetica,Arial,sans-serif;
@@ -1276,6 +1282,10 @@ section:nth-child(odd) {
 	height:300px;
 }
 
+.small-spacer {
+    height: 150px;
+}
+
 .pageHead{
 	padding-top:150px;
 	padding-bottom:150px;
@@ -1302,7 +1312,7 @@ section:nth-child(odd) {
 
 .hero{
 	text-align:center;
-	margin-bottom:100px;
+	margin-bottom:50px;
 	color:black;
 }
 .hero .space{
@@ -1623,15 +1633,50 @@ hr.not-visible{
 /*
  * media queries
  */
+@media only screen and (min-width: 1200px) {
+	.visible-when-large {
+		visibility: visible;
+    }
+    .not-visible-when-large {
+        visibility: hidden;
+        margin-top: 0px;
+        margin-bottom: 0px;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.visible-when-medium {
+		visibility: visible;
+    }
+    .not-visible-when-medium {
+        visibility: hidden;
+        margin-top: 0px;
+        margin-bottom: 0px;
+	}
+}
+
+/* @media only screen and (min-width: 992px) {
+    .background-icon {
+        font-size: 400px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .background-icon {
+        top: -140px;
+        font-size: 350px;
+    }
+} */
+
 @media only screen and (max-width: 970px) {
 	footer {
 		text-align: center;
 	}
 	footer .pull-right {
 		float: none !important;
-	}
-
+    }
 }
+
 @media only screen and (max-width: 768px) { /*col-md*/
 	#head .hero h1 {
 		font-size:35px;
