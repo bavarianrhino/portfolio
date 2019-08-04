@@ -1343,6 +1343,9 @@ section:nth-child(odd) {
 	margin-top:50px;
 	margin-bottom:25px;
 }
+.hero-filter {
+    margin-bottom: 0px !important;
+}
 .hero h2{
 	font-weight:100;
 	color:black;
