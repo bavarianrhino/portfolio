@@ -973,7 +973,7 @@ a:focus {
 .portfolio-grid div img, .portfolio-grid div .portfolio-hover {
     display: block;
     max-width: 100%;
-    cursor:crosshair;
+    cursor:pointer;
 }
 .portfolio-link{
 	position:relative;
@@ -1091,7 +1091,7 @@ a:focus {
 	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-bottom: 15px solid white;
+	border-bottom: 15px solid #4F4F4F;
 	position: absolute;
 	bottom: 0;
 	left: 48%;
@@ -1191,11 +1191,26 @@ a:focus {
 	transition: opacity 0.5s ease 0s;
 }
 
-.portfolio-close:hover {
+.portfolio-close-bottom {
+    cursor: pointer;
+	display: block;
+	height: 50px;
+	right: 20px;
+	position: absolute;
+	bottom: 15px !important;
+	width: 40px;
+	z-index: 999;
+	-webkit-transition: opacity 0.5s ease 0s;
+	-moz-transition: opacity 0.5s ease 0s;
+	-o-transition: opacity 0.5s ease 0s;
+	transition: opacity 0.5s ease 0s;
+}
+
+.portfolio-close:hover, .portfolio-close-bottom:hover {
 	opacity: 0.5;
 }
 
-.portfolio-close span {
+.portfolio-close span, .portfolio-close-bottom span {
 	-moz-user-select: none;
 	background-color: black;
 	display: block;
@@ -1212,11 +1227,12 @@ a:focus {
 	width: 100%;
 }
 
-.portfolio-close span {
+.portfolio-close span, .portfolio-close-bottom span {
 	background-color: rgba(0, 0, 0, 0);
 }
 
-.portfolio-close span:before, .portfolio-close span:after {
+.portfolio-close span:before, .portfolio-close span:after,
+.portfolio-close-bottom span:before, .portfolio-close-bottom span:after {
 	background: none repeat scroll 0 0 black;
 	content: "";
 	height: 100%;
@@ -1229,7 +1245,7 @@ a:focus {
 	width: 100%;
 }
 
-.portfolio-close span:before {
+.portfolio-close span:before, .portfolio-close-bottom span:before {
 	-webkit-transform: translateY(0px) rotate(45deg);
 	-moz-transform: translateY(0px) rotate(45deg);
 	-ms-transform: translateY(0px) rotate(45deg);
@@ -1237,7 +1253,7 @@ a:focus {
 	transform: translateY(0px) rotate(45deg);
 }
 
-.portfolio-close span:after {
+.portfolio-close span:after, .portfolio-close-bottom span:after {
 	-webkit-transform: translateY(0px) rotate(-45deg);
 	-moz-transform: translateY(0px) rotate(-45deg);
 	-ms-transform: translateY(0px) rotate(-45deg);
